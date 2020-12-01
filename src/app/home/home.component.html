@@ -1,0 +1,21 @@
+<button type="button" class="btn btn-primary" (click)="employeeDetails(1)">Employee</button>
+<button type="button" class="btn btn-danger" (click)="employeeDetails(2)">Student</button>
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of userRecords">
+        <td>{{ emp.empid }}</td>
+        <td>{{ emp.fname }}</td>
+        <td>{{ emp.lname }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+ 
