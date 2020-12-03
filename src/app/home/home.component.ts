@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UrlserviceService } from '../urlservice.service';
 
 @Component({
   selector: 'app-home',
@@ -7,21 +8,31 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  userRecords: any = [{'fname': 'Mark', 'lname': 'Otto', 'empid': '123', 'num': 23423 }, 
-                      {'fname': 'Noothan', 'lname': 'sh', 'empid': '456', 'num': 23423 },
-                      {'fname': 'fdsf', 'lname': 'sh', 'empid': '897', 'num': 23423 }];
+  
 
 
-  filterTerm: any;
+  employee: boolean = true;
+  userRecord: any;
+  _url:any;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private url: UrlserviceService ) { }
 
   ngOnInit(): void {
-    console.log(this.userRecords);
-    console.log(this.filterTerm);
+    this.userRecord = this.url.noothan;
+    this._url = this.url.url
+    console.log(this.url.noothan);
+    console.log(this.url.url);
+    // console.log(this.noothan[1].lname);
+    // console.log(this.noothan.length);
+  }
+
+  hide(){
+    this.employee = false;
   }
 
   employeeDetails(id: any){
+    
     this.router.navigate(['/employee', id]);
   }
 

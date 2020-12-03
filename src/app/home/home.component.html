@@ -1,6 +1,11 @@
-<button type="button" class="btn btn-primary" (click)="employeeDetails(1)">Employee</button>
-<button type="button" class="btn btn-danger" (click)="employeeDetails(2)">Student</button>
+<button type="button" class="btn btn-primary" (click)="employeeDetails(1)">Employee</button>&nbsp;
+<button type="button" class="btn btn-danger" (click)="employeeDetails(2)">Student</button>&nbsp;
+<button type="button" class="btn btn-danger" (click)="hide()">Hide title</button>
+<p *ngIf="employee === true">Emplyoee Details</p>
 
+<h1>
+  {{ _url }}
+</h1>
 <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -11,7 +16,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let emp of userRecords">
+      <tr *ngFor="let emp of userRecord">
         <td>{{ emp.empid }}</td>
         <td>{{ emp.fname }}</td>
         <td>{{ emp.lname }}</td>
