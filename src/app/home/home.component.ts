@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  userRecords: any = [{'fname': 'Mark', 'lname': 'Otto', 'empid': '123'}, 
-                      {'fname': 'Noothan', 'lname': 'sh', 'empid': '456'},
-                      {'fname': 'fdsf', 'lname': 'sh', 'empid': '897'}];
+  userRecords: any = [{'fname': 'Mark', 'lname': 'Otto', 'empid': '123', 'num': 23423 }, 
+                      {'fname': 'Noothan', 'lname': 'sh', 'empid': '456', 'num': 23423 },
+                      {'fname': 'fdsf', 'lname': 'sh', 'empid': '897', 'num': 23423 }];
 
 
   filterTerm: any;
